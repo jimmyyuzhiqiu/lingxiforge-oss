@@ -1,0 +1,11 @@
+<svg width="480" height="480" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="knot" width="96" height="96" patternUnits="userSpaceOnUse">
+      <path d="M8 48H88M48 8V88" stroke="rgba(31,88,146,0.28)" stroke-width="1.5"/>
+      <circle cx="48" cy="48" r="18" stroke="rgba(184,134,11,0.3)" stroke-width="1.2"/>
+      <path d="M24 24C36 36 60 60 72 72" stroke="rgba(10,132,255,0.26)" stroke-width="1.2"/>
+      <path d="M72 24C60 36 36 60 24 72" stroke="rgba(10,132,255,0.2)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="480" fill="url(#knot)"/>
+</svg>

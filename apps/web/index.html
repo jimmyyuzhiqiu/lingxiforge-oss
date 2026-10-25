@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN" theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/og-cover.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="application-name" content="Lingxi Forge" />
+    <meta name="apple-mobile-web-app-title" content="Lingxi Forge" />
+    <meta name="author" content="Lingxi Forge（灵犀造物）" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://lingxiforge.com/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://lingxiforge.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://lingxiforge.com/" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//at.alicdn.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://at.alicdn.com" crossorigin />
+    <link rel="preload" href="/ai/landing/patterns/flow-veil.svg" as="image" type="image/svg+xml" fetchpriority="high" />
+    <link rel="preload" href="/ai/landing/patterns/cloud-pattern.svg" as="image" type="image/svg+xml" fetchpriority="high" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4646310_i0v3p2kl1d.css" media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" />
+        <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4646310_i0v3p2kl1d.css" />
+    </noscript>
+    <title>Lingxi Forge｜文物复兴 AI + 3D 交付平台</title>
+    <meta name="description"
+        content="Lingxi Forge（灵犀造物）是面向博物馆文创与品牌合作的 AI + 3D 生成与履约平台：从内容理解、设计生成、可制造优化到打印交付，帮助团队稳定完成系列化上新。" />
+    <meta name="keywords"
+        content="Lingxi Forge,lingxiforge,灵犀造物,AI 3D,生成式3D,文生3D,图生3D,多视角,网格修复,可制造优化,博物馆文创,3D打印,柔性制造,文化IP合规" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7fbff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f1724" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+    <script>
+        (function () {
+            var THEME_KEY = "theme-glass";
+            var LEGACY_KEY = "theme";
+            try {
+                var stored = localStorage.getItem(THEME_KEY) || localStorage.getItem(LEGACY_KEY);
+                var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+                var next = (stored === "light" || stored === "dark")
+                    ? stored
+                    : (prefersDark ? "dark" : "light");
+                document.documentElement.setAttribute("theme", next);
+                if (stored && !localStorage.getItem(THEME_KEY)) {
+                    localStorage.setItem(THEME_KEY, stored);
+                    localStorage.removeItem(LEGACY_KEY);
+                }
+            } catch (e) {
+                document.documentElement.setAttribute("theme", "light");
+            }
+        })();
+    </script>
+    <script>
+        (function () {
+            var lowBandwidth = false;
+            try {
+                var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+                var effectiveType = (connection && connection.effectiveType ? connection.effectiveType : "").toLowerCase();
+                lowBandwidth = !!(connection && connection.saveData) || /(^|-)2g|3g/.test(effectiveType);
+            } catch (e) {
+                lowBandwidth = false;
+            }
+
+            if (lowBandwidth) return;
+
+            var assets = [
+                "/ai/landing/patterns/wave-pattern.svg",
+                "/ai/landing/patterns/signal-ring.svg",
+                "/ai/landing/patterns/stone-texture.svg",
+                "/ai/landing/patterns/bronze-corner.svg"
+            ];
+
+            var appendPrefetch = function () {
+                assets.forEach(function (href) {
+                    if (document.head.querySelector('link[rel="prefetch"][href="' + href + '"]')) return;
+                    var link = document.createElement("link");
+                    link.rel = "prefetch";
+                    link.href = href;
+                    link.as = "image";
+                    link.type = "image/svg+xml";
+                    document.head.appendChild(link);
+                });
+            };
+
+            var idle = window.requestIdleCallback;
+            if (typeof idle === "function") {
+                idle(appendPrefetch, { timeout: 1800 });
+                return;
+            }
+            window.setTimeout(appendPrefetch, 900);
+        })();
+    </script>
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:site_name" content="Lingxi Forge" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lingxi Forge｜文物复兴 AI + 3D 交付平台" />
+    <meta property="og:description"
+        content="面向博物馆文创与品牌合作的 AI + 3D 生成与履约平台：从内容理解、设计生成到可制造交付。" />
+    <meta property="og:url" content="https://lingxiforge.com/" />
+    <meta property="og:image" content="https://lingxiforge.com/og-cover.svg" />
+    <meta property="og:image:secure_url" content="https://lingxiforge.com/og-cover.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Lingxi Forge｜AI + 3D 文创赋能平台" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lingxi Forge｜文物复兴 AI + 3D 交付平台" />
+    <meta name="twitter:description"
+        content="从内容理解、设计生成到可制造交付，帮助团队稳定完成系列化上新。" />
+    <meta name="twitter:url" content="https://lingxiforge.com/" />
+    <meta name="twitter:image" content="https://lingxiforge.com/og-cover.svg" />
+    <meta name="twitter:image:alt" content="Lingxi Forge｜AI + 3D 文创赋能平台" />
+
+    <!-- Structured data (deploy to production: replace site URL/logo/search URL template) -->
+    <script id="ld-json" type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://lingxiforge.com/#organization",
+                    "name": "Lingxi Forge（灵犀造物）",
+                    "alternateName": "灵犀造物",
+                    "url": "https://lingxiforge.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://lingxiforge.com/og-cover.svg"
+                    }
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://lingxiforge.com/#website",
+                    "url": "https://lingxiforge.com/",
+                    "name": "Lingxi Forge｜文物复兴 AI + 3D 交付平台",
+                    "inLanguage": "zh-CN",
+                    "publisher": {
+                        "@id": "https://lingxiforge.com/#organization"
+                    },
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": {
+                            "@type": "EntryPoint",
+                            "urlTemplate": "https://lingxiforge.com/search?q={search_term_string}"
+                        },
+                        "query-input": "required name=search_term_string"
+                    }
+                }
+            ]
+        }
+    </script>
+    <!--    <link rel="stylesheet" src="/src/styles/index.scss"  media="screen"/>-->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            ::-webkit-scrollbar {
+                width: 6px;
+                background-color: transparent;
+            }
+
+            /*定义滚动条轨道：内阴影+圆角*/
+
+            ::-webkit-scrollbar-track {
+                background-color: transparent;
+            }
+
+            /*定义滑块：内阴影+圆角*/
+
+            ::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-color: #cecfd1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+        <main>
+            <h1>Lingxi Forge｜文物复兴 AI + 3D 交付平台</h1>
+            <p>当前浏览器已禁用 JavaScript。你仍可访问核心页面：</p>
+            <ul>
+                <li><a href="/product">产品能力</a></li>
+                <li><a href="/workflow">工作流</a></li>
+                <li><a href="/cases">案例中心</a></li>
+                <li><a href="/materials">材料与质量</a></li>
+                <li><a href="/resources">资源中心</a></li>
+                <li><a href="/contact">联系我们</a></li>
+            </ul>
+        </main>
+    </noscript>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+:root {
+  --forge-reveal-distance-active: var(--forge-reveal-distance, 22px);
+  --forge-reveal-duration-active: var(--forge-reveal-duration, 760ms);
+  --forge-loop-duration-active: var(--forge-loop-duration, 4200ms);
+  --forge-loop-opacity-active: var(--forge-loop-opacity, 0.28);
+  --forge-reveal-blur: 6px;
+}
+
+.page-shell[data-motion-scene="home"],
+.page-shell[data-motion-scene="workbench"] {
+  --forge-reveal-distance-active: 10px;
+  --forge-reveal-duration-active: 520ms;
+  --forge-reveal-blur: 1px;
+}
+
+.page-shell[data-motion-scene="landing"],
+.page-shell[data-motion-scene="marketing"],
+.page-shell[data-motion-scene="auth"],
+.page-shell[data-motion-scene="error"] {
+  --forge-reveal-distance-active: 24px;
+  --forge-reveal-blur: 7px;
+}
+
+.page-shell[data-motion-profile="lite"] {
+  --forge-loop-duration-active: calc(var(--forge-loop-duration, 4200ms) * 1.4);
+  --forge-loop-opacity-active: calc(var(--forge-loop-opacity, 0.28) * 0.56);
+}
+
+.page-shell::before,
+.page-shell::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.page-shell::before {
+  background:
+    radial-gradient(circle at 18% 10%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 42%),
+    radial-gradient(circle at 82% 18%, color-mix(in srgb, var(--cultural-bronze) 16%, transparent), transparent 46%),
+    radial-gradient(circle at 52% 88%, color-mix(in srgb, var(--cultural-celadon) 14%, transparent), transparent 50%),
+    url("/ai/landing/patterns/wave-pattern.svg") center 102% / min(860px, 78%) auto repeat-x,
+    url("/ai/landing/patterns/flow-veil.svg") center 14% / min(980px, 82%) auto no-repeat;
+  opacity: calc(var(--forge-loop-opacity-active) * 0.6);
+  mix-blend-mode: soft-light;
+  mask-image: radial-gradient(circle at 50% 44%, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.64) 48%, #000 84%);
+  -webkit-mask-image: radial-gradient(circle at 50% 44%, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.64) 48%, #000 84%);
+  animation: forgeSceneDrift calc(var(--forge-loop-duration-active) * 1.35) linear infinite;
+}
+
+.page-shell::after {
+  background:
+    url("/ai/landing/patterns/tech-knot.svg") left -2% top 24% / min(320px, 28%) auto no-repeat,
+    url("/ai/landing/patterns/signal-ring.svg") right -4% bottom 16% / min(340px, 30%) auto no-repeat,
+    url("/ai/landing/patterns/bronze-corner.svg") 18px 14px / 34px 34px no-repeat,
+    url("/ai/landing/patterns/bronze-corner.svg") calc(100% - 18px) 14px / 34px 34px no-repeat,
+    url("/ai/landing/patterns/bronze-corner.svg") 18px calc(100% - 14px) / 34px 34px no-repeat,
+    url("/ai/landing/patterns/bronze-corner.svg") calc(100% - 18px) calc(100% - 14px) / 34px 34px no-repeat;
+  opacity: calc(var(--forge-loop-opacity-active) * 0.5);
+  mix-blend-mode: soft-light;
+  animation: forgeScenePulse calc(var(--forge-loop-duration-active) * 1.1) var(--ease-in-out) infinite;
+}
+
+:root[theme="dark"] .page-shell::before {
+  opacity: calc(var(--forge-loop-opacity-active) * 0.8);
+  mix-blend-mode: screen;
+}
+
+:root[theme="dark"] .page-shell::after {
+  opacity: calc(var(--forge-loop-opacity-active) * 0.72);
+}
+
+.page-shell[data-motion-scene="home"]::before,
+.page-shell[data-motion-scene="home"]::after,
+.page-shell[data-motion-scene="workbench"]::before,
+.page-shell[data-motion-scene="workbench"]::after {
+  animation: none;
+  opacity: calc(var(--forge-loop-opacity-active) * 0.34);
+}
+
+.forge-route-enter-active,
+.forge-route-leave-active {
+  transition:
+    opacity 500ms var(--ease-out),
+    transform 500ms var(--ease-out),
+    filter 500ms var(--ease-out);
+  will-change: opacity, transform, filter;
+}
+
+.forge-route-enter-from {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  filter: blur(8px);
+}
+
+.forge-route-leave-to {
+  opacity: 0;
+  transform: translate3d(0, -14px, 0);
+  filter: blur(6px);
+}
+
+.scene-home.forge-route-enter-active,
+.scene-home.forge-route-leave-active,
+.scene-workbench.forge-route-enter-active,
+.scene-workbench.forge-route-leave-active {
+  transition:
+    opacity 280ms var(--ease-out),
+    transform 280ms var(--ease-out);
+}
+
+.scene-home.forge-route-enter-from,
+.scene-workbench.forge-route-enter-from {
+  transform: translate3d(0, 10px, 0);
+  filter: none;
+}
+
+.scene-home.forge-route-leave-to,
+.scene-workbench.forge-route-leave-to {
+  transform: translate3d(0, -8px, 0);
+  filter: none;
+}
+
+.page-shell .forge-motion-target {
+  opacity: 0;
+  transform: translate3d(0, var(--forge-reveal-distance-active), 0) scale(0.975);
+  filter: blur(var(--forge-reveal-blur));
+  transition:
+    opacity var(--forge-reveal-duration-active) var(--ease-out),
+    transform var(--forge-reveal-duration-active) var(--ease-out),
+    filter var(--forge-reveal-duration-active) var(--ease-out);
+  transition-delay: var(--forge-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.page-shell[data-motion-scene="home"] .forge-motion-target,
+.page-shell[data-motion-scene="workbench"] .forge-motion-target {
+  filter: none;
+  will-change: opacity, transform;
+}
+
+.page-shell .forge-motion-target.is-revealed {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.page-shell[data-motion-profile="full"][data-motion-scene="landing"]
+  :where(main > section.reveal.is-visible) {
+  animation: forgeRevealIdle calc(var(--forge-loop-duration-active) * 0.9) var(--ease-in-out) infinite;
+}
+
+[data-forge-motion-root] :where(h1, h2) {
+  position: relative;
+}
+
+[data-forge-motion-root] :where(h1, h2)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.12em;
+  width: min(220px, 56%);
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--cultural-bronze) 46%, transparent),
+    color-mix(in srgb, var(--accent) 78%, transparent)
+  );
+  opacity: var(--forge-loop-opacity-active);
+  transform-origin: left center;
+  animation: forgeHeadingSweep var(--forge-loop-duration-active) var(--ease-in-out) infinite;
+  pointer-events: none;
+}
+
+[data-forge-motion-root]
+  :where(
+    .el-button--primary,
+    .primary-btn,
+    .cta-btn,
+    .nav-cta--primary,
+    .hero-cta,
+    .hero-actions .el-button
+  ) {
+  transition:
+    transform var(--motion-base) var(--ease-out),
+    box-shadow var(--motion-base) var(--ease-out),
+    border-color var(--motion-base) var(--ease-out);
+}
+
+[data-forge-motion-root]
+  :where(
+    .el-button--primary,
+    .primary-btn,
+    .cta-btn,
+    .nav-cta--primary,
+    .hero-cta,
+    .hero-actions .el-button
+  ):hover {
+  transform: translate3d(0, -3px, 0);
+  box-shadow:
+    0 18px 32px color-mix(in srgb, var(--accent) 28%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--accent) 48%, transparent);
+}
+
+.page-shell[data-motion-profile="lite"]::before,
+.page-shell[data-motion-profile="lite"]::after {
+  animation: none;
+  opacity: calc(var(--forge-loop-opacity-active) * 0.64);
+}
+
+.page-shell[data-motion-profile="lite"][data-forge-motion-root] :where(h1, h2)::after {
+  animation: none;
+}
+
+@keyframes forgeSceneDrift {
+  0% {
+    background-position: center, center, center, center 102%, center 14%;
+  }
+  50% {
+    background-position: center, center, center, center 98%, center 10%;
+  }
+  100% {
+    background-position: center, center, center, center 102%, center 14%;
+  }
+}
+
+@keyframes forgeScenePulse {
+  0% {
+    opacity: calc(var(--forge-loop-opacity-active) * 0.44);
+  }
+  50% {
+    opacity: calc(var(--forge-loop-opacity-active) * 0.66);
+  }
+  100% {
+    opacity: calc(var(--forge-loop-opacity-active) * 0.44);
+  }
+}
+
+@keyframes forgeRevealIdle {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -1px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes forgeHeadingSweep {
+  0% {
+    transform: scaleX(0.35);
+    opacity: calc(var(--forge-loop-opacity-active) * 0.7);
+  }
+  45% {
+    transform: scaleX(1);
+    opacity: calc(var(--forge-loop-opacity-active) * 1.15);
+  }
+  100% {
+    transform: scaleX(0.4);
+    opacity: calc(var(--forge-loop-opacity-active) * 0.65);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-shell::before,
+  .page-shell::after,
+  .forge-route-enter-active,
+  .forge-route-leave-active,
+  .page-shell .forge-motion-target {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .forge-route-enter-from,
+  .forge-route-leave-to,
+  .page-shell .forge-motion-target,
+  .page-shell .forge-motion-target.is-revealed {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  [data-forge-motion-root] :where(h1, h2)::after,
+  [data-forge-motion-root] :where(.glass-card, .glass-surface),
+  [data-forge-motion-root]
+    :where(
+      .el-button--primary,
+      .primary-btn,
+      .cta-btn,
+      .nav-cta--primary,
+      .hero-cta,
+      .hero-actions .el-button
+    ) {
+    animation: none !important;
+  }
+}

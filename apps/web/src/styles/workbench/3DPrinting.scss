@@ -1,0 +1,41 @@
+.ThreePrinting-container {
+  position: relative;
+  overflow: hidden;
+
+  .aside-container {
+    z-index: 200;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: var(--height);
+    backdrop-filter: blur(20px);
+    background: var(--rgba);
+    border-right: 1px solid var(--aside-border-line-color);
+  }
+
+  .preview-container {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 500px;
+    right: 400px;
+    height: var(--height);
+    background: var(--glass-bg-strong);
+    border-left: 1px solid var(--aside-border-line-color);
+    border-right: 1px solid var(--aside-border-line-color);
+    overflow: hidden;
+  }
+
+  .setting-container {
+    z-index: 200;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: var(--height);
+    backdrop-filter: blur(20px);
+    background: var(--rgba);
+    border-left: 1px solid var(--aside-border-line-color);
+  }
+}

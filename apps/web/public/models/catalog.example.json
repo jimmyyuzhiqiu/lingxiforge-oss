@@ -1,0 +1,52 @@
+{
+  "models": [
+    {
+      "id": "bronze-vase",
+      "title": "青铜尊（示例）",
+      "subtitle": "商周器型 · 纹样与结构示例",
+      "tags": ["青铜器", "商周", "纹样"],
+      "format": "GLB",
+      "size": "~12 MB",
+      "thumbnail": "/stock/photos/met-archaic-bronze-vase.webp",
+      "src": "/models/heritage/bronze-vase.glb",
+      "sourcePage": "",
+      "license": "自有/授权"
+    },
+    {
+      "id": "jade-pendant",
+      "title": "玉佩（示例）",
+      "subtitle": "玉器纹样 · 适合细节观察",
+      "tags": ["玉器", "纹样", "饰品"],
+      "format": "GLB",
+      "size": "~8 MB",
+      "thumbnail": "/stock/photos/met-jade-pendant.webp",
+      "src": "/models/heritage/jade-pendant.glb",
+      "sourcePage": "",
+      "license": "自有/授权"
+    },
+    {
+      "id": "porcelain-vase",
+      "title": "瓷器（示例）",
+      "subtitle": "釉色与器型展示",
+      "tags": ["瓷器", "釉色", "器型"],
+      "format": "GLB",
+      "size": "~10 MB",
+      "thumbnail": "/stock/photos/met-porcelain-vase.webp",
+      "src": "/models/heritage/porcelain-vase.glb",
+      "sourcePage": "",
+      "license": "自有/授权"
+    },
+    {
+      "id": "bronze-mirror",
+      "title": "青铜镜（示例）",
+      "subtitle": "纹样细节 · 适合旋转观察",
+      "tags": ["青铜镜", "纹样", "纹饰"],
+      "format": "GLB",
+      "size": "~6 MB",
+      "thumbnail": "/stock/photos/met-bronze-mirror.webp",
+      "src": "/models/heritage/bronze-mirror.glb",
+      "sourcePage": "",
+      "license": "自有/授权"
+    }
+  ]
+}

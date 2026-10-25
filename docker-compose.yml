@@ -1,0 +1,25 @@
+services:
+  lingxiforge-web:
+    build:
+      context: ./apps/web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    depends_on:
+      - lingxiforge-api
+
+  lingxiforge-api:
+    build:
+      context: ./apps/api
+    environment:
+      LINGXIFORGE_DB_PATH: /data/lingxiforge.db
+      LINGXIFORGE_AUTH_SALT: ${LINGXIFORGE_AUTH_SALT:-}
+      LINGXIFORGE_CORS_ORIGINS: ${LINGXIFORGE_CORS_ORIGINS:-http://localhost:8080,http://127.0.0.1:8080}
+      HY3D_BASE_URL: ${HY3D_BASE_URL:-}
+      HY3D_TIMEOUT_SECONDS: ${HY3D_TIMEOUT_SECONDS:-600}
+    volumes:
+      - lingxiforge_data:/data
+    restart: unless-stopped
+
+volumes:
+  lingxiforge_data:

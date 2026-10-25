@@ -1,0 +1,308 @@
+$header-height: 64px;
+$header-font-size: 14px;
+$aside-width: 210px;
+
+$text-font-smaller-size: 12px;
+$text-font-small-size: 14px;
+$text-font-middle-size: 16px;
+$text-font-big-size: 18px;
+
+$container-max: 1180px;
+$grid-size: 120px;
+
+$color-text-active: var(--font-color1);
+
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 24px;
+$space-6: 32px;
+$space-7: 40px;
+$space-8: 56px;
+$space-9: 72px;
+
+$radius-sm: 10px;
+$radius-md: 14px;
+$radius-lg: 18px;
+$radius-xl: 24px;
+
+$motion-fast: 120ms;
+$motion-base: 180ms;
+$motion-slow: 260ms;
+$ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+$theme-light: (
+  text-1: #0b1220,
+  text-2: #31435e,
+  text-3: #0ea5e9,
+  text-4: #4f627d,
+  border: rgba(127, 149, 181, 0.28),
+  bg-1: rgba(255, 255, 255, 0.76),
+  bg-2: rgba(255, 255, 255, 0.95),
+  bg-3: rgba(247, 251, 255, 0.84),
+  bg-hover: rgba(14, 165, 233, 0.12),
+  page-bg: (
+    radial-gradient(circle at 16% 12%, rgba(154, 184, 224, 0.1), transparent 44%),
+    radial-gradient(circle at 86% 6%, rgba(195, 211, 236, 0.07), transparent 48%),
+    radial-gradient(circle at 48% 88%, rgba(202, 218, 240, 0.05), transparent 58%),
+    linear-gradient(144deg, #ffffff 0%, #f8fcff 48%, #fdfefe 100%)
+  ),
+  orb-1: rgba(126, 164, 214, 0.11),
+  orb-2: rgba(172, 198, 232, 0.1),
+  orb-3: rgba(142, 176, 214, 0.08),
+  orb-4: rgba(95, 133, 176, 0.07),
+  orb-5: rgba(122, 154, 194, 0.06),
+  texture: (
+    repeating-linear-gradient(
+      120deg,
+      rgba(96, 120, 152, 0.011),
+      rgba(96, 120, 152, 0.011) 1px,
+      transparent 1px,
+      transparent 11px
+    ),
+    repeating-linear-gradient(
+      30deg,
+      rgba(35, 90, 164, 0.008),
+      rgba(35, 90, 164, 0.008) 1px,
+      transparent 1px,
+      transparent 16px
+    )
+  ),
+  glass-bg: rgba(255, 255, 255, 0.78),
+  glass-bg-strong: rgba(255, 255, 255, 0.94),
+  glass-border: rgba(118, 140, 170, 0.24),
+  glass-shadow: 0 20px 48px rgba(15, 31, 55, 0.08),
+  glass-blur: 16px,
+  nav-glass: rgba(242, 248, 255, 0.94),
+  nav-text: #0b1220,
+  accent: #0b84ff,
+  accent-strong: #2da5ff,
+  accent-soft-bg: rgba(11, 132, 255, 0.12),
+  accent-glow: rgba(11, 132, 255, 0.24),
+  landing-accent: #0b84ff,
+  landing-accent-strong: #2da5ff,
+  cultural-bronze: #b8860b,
+  cultural-celadon: #7c9885,
+  cultural-bamboo: #8b572a,
+  cultural-ink: #1a1a1a,
+  cultural-paper: #f6f3ee,
+  cultural-pattern-opacity: 0.09,
+  cultural-texture-opacity: 0.12,
+  cultural-parallax-factor: 0.3,
+  fx-intensity: 0.9,
+  fx-grid-opacity: 0.24,
+  fx-particle-opacity: 0.2,
+  fx-hue-shift: 0deg,
+  forge-reveal-distance: 18px,
+  forge-reveal-duration: 620ms,
+  forge-loop-duration: 4600ms,
+  forge-loop-opacity: 0.24,
+  success: #10b981,
+  success-soft-bg: rgba(16, 185, 129, 0.16),
+  focus: rgba(14, 165, 233, 0.45),
+  grid-line: rgba(88, 110, 140, 0.1),
+  fluid-base-rgb: "188, 207, 232",
+  fluid-accent-rgb: "66, 92, 130",
+  fluid-highlight-rgb: "221, 232, 246",
+  fluid-shadow-rgb: "19, 35, 58",
+  fluid-mask-rgb: "235, 242, 250",
+);
+
+$theme-dark: (
+  text-1: #eef4ff,
+  text-2: #d2deef,
+  text-3: #8ec6ff,
+  text-4: #a4b3cc,
+  border: rgba(123, 148, 186, 0.34),
+  bg-1: rgba(7, 11, 19, 0.88),
+  bg-2: rgba(10, 16, 28, 0.9),
+  bg-3: rgba(13, 20, 34, 0.8),
+  bg-hover: rgba(33, 142, 255, 0.2),
+  page-bg: (
+    radial-gradient(circle at 14% 8%, rgba(22, 149, 255, 0.2) 0%, transparent 42%),
+    radial-gradient(circle at 86% 16%, rgba(197, 152, 82, 0.14) 0%, transparent 44%),
+    radial-gradient(circle at 52% 86%, rgba(125, 175, 150, 0.12) 0%, transparent 48%),
+    linear-gradient(140deg, #050910 0%, #0c172a 48%, #0a1220 100%)
+  ),
+  orb-1: rgba(34, 149, 255, 0.3),
+  orb-2: rgba(187, 146, 84, 0.2),
+  orb-3: rgba(126, 184, 156, 0.18),
+  orb-4: rgba(83, 132, 196, 0.14),
+  orb-5: rgba(21, 54, 101, 0.24),
+  texture: (
+    repeating-linear-gradient(
+      120deg,
+      rgba(133, 171, 154, 0.06),
+      rgba(133, 171, 154, 0.06) 1px,
+      transparent 1px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      30deg,
+      rgba(32, 146, 255, 0.056),
+      rgba(32, 146, 255, 0.056) 1px,
+      transparent 1px,
+      transparent 12px
+    )
+  ),
+  glass-bg: rgba(10, 17, 30, 0.64),
+  glass-bg-strong: rgba(14, 23, 40, 0.82),
+  glass-border: rgba(123, 148, 186, 0.4),
+  glass-shadow: 0 34px 90px rgba(2, 7, 27, 0.84),
+  glass-blur: 26px,
+  nav-glass: rgba(13, 21, 36, 0.88),
+  nav-text: #eff4ff,
+  accent: #2f9bff,
+  accent-strong: #62c1ff,
+  accent-soft-bg: rgba(44, 154, 255, 0.22),
+  accent-glow: rgba(44, 154, 255, 0.5),
+  landing-accent: #2f9bff,
+  landing-accent-strong: #62c1ff,
+  cultural-bronze: #d9af63,
+  cultural-celadon: #9ec6b1,
+  cultural-bamboo: #b07d4e,
+  cultural-ink: #e8e8e8,
+  cultural-paper: #121820,
+  cultural-pattern-opacity: 0.16,
+  cultural-texture-opacity: 0.1,
+  cultural-parallax-factor: 0.24,
+  fx-intensity: 1,
+  fx-grid-opacity: 0.42,
+  fx-particle-opacity: 0.34,
+  fx-hue-shift: 12deg,
+  forge-reveal-distance: 24px,
+  forge-reveal-duration: 760ms,
+  forge-loop-duration: 4200ms,
+  forge-loop-opacity: 0.4,
+  success: #34d399,
+  success-soft-bg: rgba(52, 211, 153, 0.18),
+  focus: rgba(44, 154, 255, 0.58),
+  grid-line: rgba(157, 180, 211, 0.2),
+  fluid-base-rgb: "58, 104, 162",
+  fluid-accent-rgb: "48, 159, 255",
+  fluid-highlight-rgb: "167, 198, 235",
+  fluid-shadow-rgb: "6, 14, 30",
+  fluid-mask-rgb: "14, 28, 46",
+);
+
+@mixin apply-theme-vars($theme) {
+  --border-line-color: #{map-get($theme, border)};
+  --font-color: #{map-get($theme, text-1)};
+  --font-color1: #{map-get($theme, text-1)};
+  --font-color2: #{map-get($theme, text-2)};
+  --font-color3: #{map-get($theme, text-3)};
+  --font-color4: #{map-get($theme, text-4)};
+  --font-color5: #{map-get($theme, text-1)};
+  --font-color4-active: #{map-get($theme, text-3)};
+  --background: #{map-get($theme, bg-1)};
+  --background2: #{map-get($theme, bg-2)};
+  --background3: #{map-get($theme, bg-3)};
+  --background4-hover: #{map-get($theme, bg-hover)};
+  --page-background: #{map-get($theme, page-bg)};
+  --orb-1: #{map-get($theme, orb-1)};
+  --orb-2: #{map-get($theme, orb-2)};
+  --orb-3: #{map-get($theme, orb-3)};
+  --orb-4: #{map-get($theme, orb-4)};
+  --orb-5: #{map-get($theme, orb-5)};
+  --page-texture: #{map-get($theme, texture)};
+  --glass-bg: #{map-get($theme, glass-bg)};
+  --glass-bg-strong: #{map-get($theme, glass-bg-strong)};
+  --glass-border: #{map-get($theme, glass-border)};
+  --glass-shadow: #{map-get($theme, glass-shadow)};
+  --glass-blur: #{map-get($theme, glass-blur)};
+  --nav-glass: #{map-get($theme, nav-glass)};
+  --nav-text: #{map-get($theme, nav-text)};
+  --accent: #{map-get($theme, accent)};
+  --accent-strong: #{map-get($theme, accent-strong)};
+  --accent-soft-bg: #{map-get($theme, accent-soft-bg)};
+  --accent-glow: #{map-get($theme, accent-glow)};
+  --landing-accent: #{map-get($theme, landing-accent)};
+  --landing-accent-strong: #{map-get($theme, landing-accent-strong)};
+  --cultural-bronze: #{map-get($theme, cultural-bronze)};
+  --cultural-celadon: #{map-get($theme, cultural-celadon)};
+  --cultural-bamboo: #{map-get($theme, cultural-bamboo)};
+  --cultural-ink: #{map-get($theme, cultural-ink)};
+  --cultural-paper: #{map-get($theme, cultural-paper)};
+  --cultural-pattern-opacity: #{map-get($theme, cultural-pattern-opacity)};
+  --cultural-texture-opacity: #{map-get($theme, cultural-texture-opacity)};
+  --cultural-parallax-factor: #{map-get($theme, cultural-parallax-factor)};
+  --fx-intensity: #{map-get($theme, fx-intensity)};
+  --fx-grid-opacity: #{map-get($theme, fx-grid-opacity)};
+  --fx-particle-opacity: #{map-get($theme, fx-particle-opacity)};
+  --fx-hue-shift: #{map-get($theme, fx-hue-shift)};
+  --forge-reveal-distance: #{map-get($theme, forge-reveal-distance)};
+  --forge-reveal-duration: #{map-get($theme, forge-reveal-duration)};
+  --forge-loop-duration: #{map-get($theme, forge-loop-duration)};
+  --forge-loop-opacity: #{map-get($theme, forge-loop-opacity)};
+  --success: #{map-get($theme, success)};
+  --success-soft-bg: #{map-get($theme, success-soft-bg)};
+  --focus-ring-color: #{map-get($theme, focus)};
+  --grid-line: #{map-get($theme, grid-line)};
+  --fluid-base-rgb: #{map-get($theme, fluid-base-rgb)};
+  --fluid-accent-rgb: #{map-get($theme, fluid-accent-rgb)};
+  --fluid-highlight-rgb: #{map-get($theme, fluid-highlight-rgb)};
+  --fluid-shadow-rgb: #{map-get($theme, fluid-shadow-rgb)};
+  --fluid-mask-rgb: #{map-get($theme, fluid-mask-rgb)};
+
+  --header-title: #{map-get($theme, text-1)};
+  --header-background-color: #{map-get($theme, glass-bg-strong)};
+
+  --aside-background-color: #{map-get($theme, glass-bg)};
+  --aside-border-line-color: #{map-get($theme, glass-border)};
+  --aside-text-color: #{map-get($theme, text-1)};
+  --aside-active-color: #{map-get($theme, bg-hover)};
+  --aside-active-text-color: #{map-get($theme, text-1)};
+}
+
+@mixin emit-design-tokens() {
+  :root {
+    --radius-sm: #{$radius-sm};
+    --radius-md: #{$radius-md};
+    --radius-lg: #{$radius-lg};
+    --radius-xl: #{$radius-xl};
+
+    --space-1: #{$space-1};
+    --space-2: #{$space-2};
+    --space-3: #{$space-3};
+    --space-4: #{$space-4};
+    --space-5: #{$space-5};
+    --space-6: #{$space-6};
+    --space-7: #{$space-7};
+    --space-8: #{$space-8};
+    --space-9: #{$space-9};
+
+    --motion-fast: #{$motion-fast};
+    --motion-base: #{$motion-base};
+    --motion-slow: #{$motion-slow};
+    --ease-out: #{$ease-out};
+    --ease-in-out: #{$ease-in-out};
+
+    --grid-size: #{$grid-size};
+
+    --font-display: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei",
+      "Noto Sans CJK SC", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+    --font-body: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei",
+      "Noto Sans CJK SC", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+    --font-mono: "Fira Code", "JetBrains Mono", ui-monospace,
+      SFMono-Regular, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+
+    --focus-ring: 0 0 0 3px var(--focus-ring-color);
+
+    --container-max: #{$container-max};
+  }
+
+  :root[theme="light"],
+  body[theme="light"] {
+    @include apply-theme-vars($theme-light);
+  }
+
+  :root[theme="dark"],
+  body[theme="dark"] {
+    @include apply-theme-vars($theme-dark);
+  }
+}

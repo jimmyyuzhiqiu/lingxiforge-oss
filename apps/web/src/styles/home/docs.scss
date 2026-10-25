@@ -1,0 +1,132 @@
+.docs-page {
+  padding: 18px 20px 28px;
+  color: var(--font-color1);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
+  margin-bottom: 16px;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+
+  .subtitle {
+    color: var(--font-color2);
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+
+  .actions {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    min-width: 280px;
+  }
+
+  .kpi {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 10px 12px;
+    text-align: center;
+    backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+
+    .value {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+  .label {
+    font-size: $text-font-smaller-size;
+    color: var(--font-color4);
+    margin-top: 2px;
+  }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 14px;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  .wf {
+    border: 1px solid var(--border-line-color);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 12px;
+    backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  }
+
+  .wf-title {
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .wf-desc {
+    font-size: $text-font-small-size;
+    color: var(--font-color2);
+    line-height: 1.5;
+  }
+}
+
+.tips {
+  padding-left: 18px;
+  margin: 0;
+  list-style: disc;
+
+  li {
+    color: var(--font-color2);
+    line-height: 1.7;
+    padding: 2px 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .grid,
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+
+    .right {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+}

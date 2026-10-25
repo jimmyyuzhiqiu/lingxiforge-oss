@@ -1,0 +1,101 @@
+.container {
+  position: relative;
+  height: 100vh;
+
+  .background-container {
+    .background-box {
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      right: 100px;
+      width: calc(100% - 500px);
+      height: calc(100% - 200px);
+      background: radial-gradient(circle at 25% 40%, var(--orb-2), transparent 65%),
+        radial-gradient(circle at 70% 35%, var(--orb-1), transparent 60%),
+        radial-gradient(circle at 40% 90%, var(--orb-3), transparent 55%);
+      background-size: 100% 100%;
+      object-fit: cover;
+      transform: translateY(-50%);
+      filter: blur(30px);
+      opacity: 0.5;
+    }
+  }
+
+  .body-container {
+    z-index: 2;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+
+    .toThree-left {
+      width: 55%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        animation: opacityAnimation;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: baseline;
+      padding: 28px 30px;
+      background: var(--glass-bg-strong);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      box-shadow: var(--glass-shadow);
+      backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+
+      .toThree-top {
+        h1 {
+          color: var(--font-color);
+          font-size: 50px;
+          font-weight: 500;
+          letter-spacing: 5px;
+        }
+
+        p {
+          color: var(--font-color2);
+          width: 580px;
+          padding: 20px 0;
+          line-height: 1.7;
+        }
+      }
+
+      .toThree-bottom {
+        margin-top: 100px;
+
+        .button-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 150px;
+          background: linear-gradient(135deg, rgba(79, 140, 255, 0.95), rgba(99, 102, 241, 0.95));
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          border-radius: 999px;
+          padding: 15px 20px;
+          cursor: pointer;
+          box-shadow: 0 12px 30px rgba(59, 130, 246, 0.35);
+          transition: all 0.2s ease;
+          li:nth-child(1) {
+            color: #ffffff;
+            font-size: 20px;
+          }
+
+          &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 16px 34px rgba(59, 130, 246, 0.45);
+          }
+        }
+      }
+    }
+  }
+}

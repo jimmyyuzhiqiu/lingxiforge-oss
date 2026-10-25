@@ -1,0 +1,171 @@
+{
+  "generatedAt": "2026-01-30",
+  "photos": [
+    {
+      "id": "met-bronze-mirror",
+      "localPath": "/stock/photos/met-bronze-mirror.webp",
+      "title": "Mirror with hunting scene",
+      "culture": "China",
+      "date": "8th century",
+      "source": "The Metropolitan Museum of Art Open Access",
+      "sourcePage": "https://www.metmuseum.org/art/collection/search/44806",
+      "sourceImage": "https://images.metmuseum.org/CRDImages/as/original/59132.jpg",
+      "license": "Public Domain (Met Open Access)"
+    },
+    {
+      "id": "met-porcelain-vase",
+      "localPath": "/stock/photos/met-porcelain-vase.webp",
+      "title": "Vase",
+      "culture": "China",
+      "date": "1713–22",
+      "source": "The Metropolitan Museum of Art Open Access",
+      "sourcePage": "https://www.metmuseum.org/art/collection/search/42229",
+      "sourceImage": "https://images.metmuseum.org/CRDImages/as/original/DP246426.jpg",
+      "license": "Public Domain (Met Open Access)"
+    },
+    {
+      "id": "met-jade-pendant",
+      "localPath": "/stock/photos/met-jade-pendant.webp",
+      "title": "Pendant",
+      "culture": "China",
+      "date": "18th–19th century",
+      "source": "The Metropolitan Museum of Art Open Access",
+      "sourcePage": "https://www.metmuseum.org/art/collection/search/43932",
+      "sourceImage": "https://images.metmuseum.org/CRDImages/as/original/DP-14153-037.jpg",
+      "license": "Public Domain (Met Open Access)"
+    },
+    {
+      "id": "met-dragon-pendant",
+      "localPath": "/stock/photos/met-dragon-pendant.webp",
+      "title": "Knotted dragon ring",
+      "culture": "China",
+      "date": "3rd century BCE",
+      "source": "The Metropolitan Museum of Art Open Access",
+      "sourcePage": "https://www.metmuseum.org/art/collection/search/39637",
+      "sourceImage": "https://images.metmuseum.org/CRDImages/as/original/DP-32069-001.jpg",
+      "license": "Public Domain (Met Open Access)"
+    },
+    {
+      "id": "met-basin-1774",
+      "localPath": "/stock/photos/met-basin-1774.webp",
+      "title": "Basin",
+      "culture": "China",
+      "date": "dated 1774",
+      "source": "The Metropolitan Museum of Art Open Access",
+      "sourcePage": "https://www.metmuseum.org/art/collection/search/42060",
+      "sourceImage": "https://images.metmuseum.org/CRDImages/as/original/DP-14153-068.jpg",
+      "license": "Public Domain (Met Open Access)"
+    },
+    {
+      "id": "met-archaic-bronze-vase",
+      "localPath": "/stock/photos/met-archaic-bronze-vase.webp",
+      "title": "Vase in Shape of Archaic Bronze Vessel",
+      "culture": "China",
+      "date": "18th century",
+      "source": "The Metropolitan Museum of Art Open Access",
+      "sourcePage": "https://www.metmuseum.org/art/collection/search/42215",
+      "sourceImage": "https://images.metmuseum.org/CRDImages/as/original/DP-14605-013.jpg",
+      "license": "Public Domain (Met Open Access)"
+    },
+    {
+      "id": "met-cloisonne-vase",
+      "localPath": "/stock/photos/met-cloisonne-vase.webp",
+      "title": "Vase from sample set of Chinese cloisonné",
+      "culture": "China",
+      "date": "late 19th century",
+      "source": "The Metropolitan Museum of Art Open Access",
+      "sourcePage": "https://www.metmuseum.org/art/collection/search/40603",
+      "sourceImage": "https://images.metmuseum.org/CRDImages/as/original/DP228953.jpg",
+      "license": "Public Domain (Met Open Access)"
+    },
+    {
+      "id": "met-ink-painting",
+      "localPath": "/stock/photos/met-ink-painting.webp",
+      "title": "Painting",
+      "culture": "China",
+      "date": "20th century",
+      "source": "The Metropolitan Museum of Art Open Access",
+      "sourcePage": "https://www.metmuseum.org/art/collection/search/51868",
+      "sourceImage": "https://images.metmuseum.org/CRDImages/as/original/DP154393.jpg",
+      "license": "Public Domain (Met Open Access)"
+    },
+    {
+      "id": "met-seal",
+      "localPath": "/stock/photos/met-seal.webp",
+      "title": "Seal",
+      "culture": "China",
+      "date": "",
+      "source": "The Metropolitan Museum of Art Open Access",
+      "sourcePage": "https://www.metmuseum.org/art/collection/search/40995",
+      "sourceImage": "https://images.metmuseum.org/CRDImages/as/original/19_19_10_O1.jpg",
+      "license": "Public Domain (Met Open Access)"
+    },
+    {
+      "id": "nasa-additive-lab",
+      "localPath": "/stock/photos/nasa-additive-lab.webp",
+      "title": "MSFC Additive Manufacturing Laboratory",
+      "source": "NASA Image and Video Library",
+      "sourcePage": "https://images.nasa.gov/details/MSFC-1500692",
+      "sourceImage": "https://images-assets.nasa.gov/image/MSFC-1500692/MSFC-1500692~large.jpg",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-metal-3d-printer",
+      "localPath": "/stock/photos/nasa-metal-3d-printer.webp",
+      "title": "NASA astronaut configures the Metal 3D printer (ISS)",
+      "source": "NASA Image and Video Library",
+      "sourcePage": "https://images.nasa.gov/details/iss071e522127",
+      "sourceImage": "https://images-assets.nasa.gov/image/iss071e522127/iss071e522127~large.jpg",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-3d-habitat",
+      "localPath": "/stock/photos/nasa-3d-habitat.webp",
+      "title": "NASA 3D-Printed Habitat Challenge (overview)",
+      "source": "NASA Image and Video Library",
+      "sourcePage": "https://images.nasa.gov/details/MSFC-201900567",
+      "sourceImage": "https://images-assets.nasa.gov/image/MSFC-201900567/MSFC-201900567~large.jpg",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-3d-habitat-2",
+      "localPath": "/stock/photos/nasa-3d-habitat-2.webp",
+      "title": "NASA 3D-Printed Habitat Challenge",
+      "source": "NASA Image and Video Library",
+      "sourcePage": "https://images.nasa.gov/details/MSFC-201900588",
+      "sourceImage": "https://images-assets.nasa.gov/image/MSFC-201900588/MSFC-201900588~large.jpg",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-printed-engine-part",
+      "localPath": "/stock/photos/nasa-printed-engine-part.webp",
+      "title": "Andy Hardin with 3-D printed engine part",
+      "source": "NASA Image and Video Library",
+      "sourcePage": "https://images.nasa.gov/details/MSFC-1500693",
+      "sourceImage": "https://images-assets.nasa.gov/image/MSFC-1500693/MSFC-1500693~large.jpg",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-3d-printer-coupon",
+      "localPath": "/stock/photos/nasa-3d-printer-coupon.webp",
+      "title": "3D Printer Coupon removal and stowage",
+      "source": "NASA Image and Video Library",
+      "sourcePage": "https://images.nasa.gov/details/iss042e031282",
+      "sourceImage": "https://images-assets.nasa.gov/image/iss042e031282/iss042e031282~large.jpg",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-advanced-manufacturing-team",
+      "localPath": "/stock/photos/nasa-advanced-manufacturing-team.webp",
+      "title": "ADVANCED MANUFACTURING TEAM",
+      "source": "NASA Image and Video Library",
+      "sourcePage": "https://images.nasa.gov/details/MSFC-1600392",
+      "sourceImage": "https://images-assets.nasa.gov/image/MSFC-1600392/MSFC-1600392~large.jpg",
+      "license": "Public Domain (NASA)"
+    }
+  ],
+  "notes": [
+    "NASA images are generally public domain; do not imply NASA endorsement.",
+    "Met Open Access images are public domain; credit is appreciated."
+  ]
+}

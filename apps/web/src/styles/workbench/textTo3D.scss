@@ -1,0 +1,53 @@
+.text23D-container {
+  position: relative;
+  overflow: hidden;
+  padding: 16px;
+  box-sizing: border-box;
+
+  .first-part {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .aside-container {
+    z-index: 200;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: var(--height);
+    backdrop-filter: blur(20px);
+    background: var(--glass-bg-strong);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    box-shadow: var(--glass-shadow);
+    overflow: hidden;
+  }
+
+  .preview-container {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 301px;
+    width: 450px;
+    //height: calc(100vh - $header-height);
+    height: var(--height);
+    backdrop-filter: blur(20px);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    box-shadow: var(--glass-shadow);
+    overflow: hidden;
+  }
+
+  .threeShow-container {
+    position: relative;
+    height: var(--height);
+    border-radius: 18px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg-strong);
+    box-shadow: var(--glass-shadow);
+    overflow: hidden;
+  }
+}

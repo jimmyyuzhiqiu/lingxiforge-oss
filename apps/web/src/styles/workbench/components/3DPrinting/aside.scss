@@ -1,0 +1,134 @@
+section {
+  overflow-x: hidden;
+}
+
+.big {
+  border-bottom: 1px solid var(--aside-border-line-color);
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding: 10px;
+
+    i {
+      color: var(--font-color1);
+      font-size: 18px;
+    }
+
+    .left {
+      cursor: pointer;
+    }
+
+    .center {
+      display: flex;
+      align-items: center;
+
+      i {
+        padding: 0 10px;
+        font-size: 24px;
+        color: var(--font-color3);
+      }
+
+      span {
+        color: var(--font-color3);
+      }
+    }
+
+    .right {
+      cursor: pointer;
+
+      i {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .right-part {
+    width: 50px;
+  }
+}
+
+.main {
+  padding: 10px;
+
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: $text-font-small-size;
+    }
+  }
+
+  .main-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+
+      img {
+        width: 100%;
+      }
+
+      .asset-title {
+        font-size: $text-font-smaller-size;
+        text-align: center;
+      }
+
+      .asset-meta {
+        font-size: $text-font-smaller-size;
+        color: var(--font-color2);
+        text-align: center;
+      }
+    }
+  }
+}
+
+.pagination-container {
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 10px;
+
+  .demo-pagination-block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    :deep(.el-pager li) {
+      color: var(--font-color1);
+      background: var(--glass-bg);
+    }
+
+    :deep(button) {
+      background-color: var(--glass-bg);
+    }
+
+    :deep(i) {
+      color: var(--font-color1);
+    }
+
+    :deep(.is-active) {
+      color: var(--font-color4-active) !important;
+    }
+  }
+}
+
+:deep(.el-select__wrapper) {
+  border-radius: 8px;
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border);
+  transition: all 0s;
+
+  span {
+    font-size: $text-font-small-size;
+  }
+}

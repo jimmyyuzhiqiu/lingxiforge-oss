@@ -1,0 +1,53 @@
+.waterfall-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 0;
+
+  .top {
+    display: flex;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: baseline;
+
+      img {
+        width: 40px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      h4 {
+        color: var(--font-color2);
+        cursor: pointer;
+      }
+
+      p {
+        font-size: $text-font-smaller-size;
+        color: var(--font-color2);
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: end;
+
+    li {
+      display: flex;
+      align-items: end;
+      padding: 0 5px;
+
+      .el-icon {
+        color: var(--font-color2);
+      }
+
+      span {
+        font-size: $text-font-smaller-size;
+        color: var(--font-color2);
+      }
+    }
+  }
+}

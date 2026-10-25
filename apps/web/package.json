@@ -1,0 +1,43 @@
+{
+  "name": "to3dmodel",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "clean:dist": "node ./scripts/clean-dist.mjs",
+    "build": "npm run seo:sitemap && npm run clean:dist && vue-tsc -b && vite build && npm run perf:budget && npm run style:check && npm run seo:check",
+    "preview": "vite preview",
+    "seo:sitemap": "node ./scripts/generate-sitemap.mjs",
+    "seo:check": "node ./scripts/check-seo.mjs",
+    "perf:budget": "node ./scripts/check-bundle-budget.mjs",
+    "style:check": "node ./scripts/check-style-scope.mjs"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "animejs": "^3.2.2",
+    "axios": "^1.7.2",
+    "element-china-area-data": "^6.1.0",
+    "element-plus": "^2.7.8",
+    "gsap": "^3.12.5",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
+    "three": "^0.143.0",
+    "vue": "^3.4.31",
+    "vue-3d-loader": "^2.2.4",
+    "vue-clipboard3": "^2.0.0",
+    "vue-router": "^4.4.0",
+    "vue-waterfall-plugin-next": "^2.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "esbuild": "^0.25.1",
+    "sass": "^1.77.8",
+    "typescript": "^5.5.3",
+    "unplugin-auto-import": "^0.18.2",
+    "unplugin-vue-components": "^0.27.3",
+    "vite": "^5.3.4",
+    "vue-tsc": "^2.0.24"
+  }
+}

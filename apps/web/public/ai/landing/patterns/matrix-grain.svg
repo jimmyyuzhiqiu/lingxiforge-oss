@@ -1,0 +1,10 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="rgba(64,111,170,0.18)" stroke-width="1">
+    <path d="M0 24H240M0 72H240M0 120H240M0 168H240M0 216H240"/>
+    <path d="M24 0V240M72 0V240M120 0V240M168 0V240M216 0V240"/>
+  </g>
+  <g fill="rgba(184,134,11,0.18)">
+    <circle cx="24" cy="24" r="2"/><circle cx="120" cy="72" r="2"/><circle cx="216" cy="120" r="2"/>
+    <circle cx="72" cy="168" r="2"/><circle cx="168" cy="216" r="2"/><circle cx="24" cy="216" r="2"/>
+  </g>
+</svg>

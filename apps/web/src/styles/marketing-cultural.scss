@@ -1,0 +1,223 @@
+.page.marketing-page {
+  --marketing-pattern-opacity: 0.1;
+  --marketing-grain-opacity: 0.05;
+  --marketing-grid-opacity: var(--fx-grid-opacity, 0.22);
+  --marketing-particle-opacity: var(--fx-particle-opacity, 0.18);
+  --marketing-hue-shift: var(--fx-hue-shift, 0deg);
+  --marketing-breath-duration: 8s;
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+  background:
+    linear-gradient(165deg, #f6f3ee 0%, #eef2f7 34%, #fff9f0 68%, #f7f9fc 100%);
+}
+
+.page.marketing-page::before,
+.page.marketing-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page.marketing-page::before {
+  background:
+    url("/ai/landing/patterns/flow-veil.svg") center 8% / min(980px, 84%) auto no-repeat,
+    url("/ai/landing/patterns/tech-knot.svg") left -2% top 10% / min(420px, 36%) auto no-repeat,
+    url("/ai/landing/patterns/signal-ring.svg") right -2% bottom 16% / min(420px, 36%) auto no-repeat,
+    url("/ai/landing/patterns/cloud-pattern.svg") center 14% / min(920px, 78%) auto no-repeat,
+    url("/ai/landing/patterns/wave-pattern.svg") center 88% / min(820px, 72%) auto repeat-x;
+  opacity: var(--marketing-pattern-opacity);
+  filter: hue-rotate(var(--marketing-hue-shift));
+  transform: translate3d(0, calc(var(--landing-scroll-y, 0px) * -0.05), 0);
+  animation: marketing-breath var(--marketing-breath-duration) ease-in-out infinite;
+}
+
+.page.marketing-page::after {
+  background:
+    radial-gradient(circle at 18% 14%, rgba(11, 132, 255, 0.08), transparent 40%),
+    radial-gradient(circle at 82% 26%, rgba(184, 134, 11, 0.08), transparent 42%),
+    url("/ai/landing/patterns/matrix-grain.svg") center / 540px auto repeat,
+    url("/ai/landing/patterns/stone-texture.svg") center / 420px auto repeat,
+    url("/ai/landing/patterns/wave-pattern.svg") center 102% / min(920px, 80%) auto repeat-x;
+  opacity: var(--marketing-grain-opacity);
+  mix-blend-mode: soft-light;
+}
+
+.page-shell[data-motion-profile="lite"] .page.marketing-page::before,
+.page-shell[data-motion-profile="lite"] .page.marketing-page::after {
+  animation: none;
+  transform: none;
+}
+
+.page.marketing-page > .el-container::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    repeating-linear-gradient(
+      120deg,
+      color-mix(in srgb, var(--accent) 10%, transparent) 0,
+      color-mix(in srgb, var(--accent) 10%, transparent) 1px,
+      transparent 1px,
+      transparent 36px
+    );
+  opacity: calc(var(--marketing-grid-opacity) * var(--fx-intensity, 1));
+  mask-image: radial-gradient(circle at 50% 35%, black 35%, transparent 75%);
+  -webkit-mask-image: radial-gradient(circle at 50% 35%, black 35%, transparent 75%);
+}
+
+.page.marketing-page > .el-container::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    url("/ai/landing/patterns/bronze-corner.svg") 18px 14px / 34px 34px no-repeat,
+    url("/ai/landing/patterns/bronze-corner.svg") calc(100% - 18px) 14px / 34px 34px no-repeat,
+    url("/ai/landing/patterns/bronze-corner.svg") 18px calc(100% - 14px) / 34px 34px no-repeat,
+    url("/ai/landing/patterns/bronze-corner.svg") calc(100% - 18px) calc(100% - 14px) / 34px 34px no-repeat,
+    url("/ai/landing/patterns/artifact-silhouette.svg") left 4% bottom 12% / min(260px, 24%) auto no-repeat,
+    url("/ai/landing/patterns/signal-ring.svg") right 6% top 16% / min(280px, 24%) auto no-repeat;
+  opacity: calc(var(--marketing-pattern-opacity) * 0.76);
+  mix-blend-mode: soft-light;
+}
+
+.page-shell[data-motion-profile="lite"] .page.marketing-page > .el-container::before,
+.page-shell[data-motion-profile="lite"] .page.marketing-page > .el-container::after {
+  animation: none;
+}
+
+.page.marketing-page > .el-container,
+.page.marketing-page .main {
+  position: relative;
+  z-index: 1;
+}
+
+.page.marketing-page :where(.glass-card, .glass-surface) {
+  border-color: color-mix(in srgb, var(--glass-border) 80%, rgba(139, 117, 83, 0.18));
+}
+
+.page.marketing-page .hero,
+.page.marketing-page .section > .glass-card,
+.page.marketing-page .section > .glass-surface {
+  box-shadow:
+    10px 10px 24px rgba(186, 176, 160, 0.18),
+    -8px -8px 20px rgba(255, 255, 255, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.74),
+    inset 0 -1px 0 rgba(65, 55, 39, 0.05);
+}
+
+.page.marketing-page :where(.glass-card, .glass-surface) {
+  position: relative;
+}
+
+.page.marketing-page :where(.glass-card, .glass-surface)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(
+      circle at 12% 8%,
+      color-mix(in srgb, var(--accent) 18%, transparent),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 88% 82%,
+      color-mix(in srgb, var(--cultural-bronze) 16%, transparent),
+      transparent 45%
+    );
+  opacity: calc(var(--marketing-particle-opacity) * var(--fx-intensity, 1));
+}
+
+.page.marketing-page :where(.glass-card > *, .glass-surface > *) {
+  position: relative;
+  z-index: 1;
+}
+
+.page.marketing-page :where(.el-button:not(.is-disabled)):hover {
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent),
+    0 12px 24px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+:root[theme="dark"] .page.marketing-page {
+  --marketing-pattern-opacity: 0.14;
+  --marketing-grain-opacity: 0.08;
+  background:
+    radial-gradient(circle at 14% 8%, rgba(43, 156, 255, 0.16), transparent 42%),
+    radial-gradient(circle at 84% 18%, rgba(210, 162, 92, 0.12), transparent 46%),
+    radial-gradient(circle at 52% 84%, rgba(134, 184, 158, 0.1), transparent 50%),
+    linear-gradient(164deg, #070d17 0%, #0f1a2d 52%, #0c1728 100%);
+}
+
+:root[theme="dark"] .page.marketing-page::before {
+  opacity: var(--marketing-pattern-opacity);
+}
+
+:root[theme="dark"] .page.marketing-page::after {
+  background:
+    radial-gradient(circle at 22% 14%, rgba(44, 154, 255, 0.16), transparent 42%),
+    radial-gradient(circle at 80% 32%, rgba(210, 162, 92, 0.12), transparent 46%),
+    radial-gradient(circle at 52% 82%, rgba(134, 184, 158, 0.1), transparent 50%),
+    url("/ai/landing/patterns/matrix-grain.svg") center / 560px auto repeat,
+    url("/ai/landing/patterns/stone-texture.svg") center / 420px auto repeat,
+    url("/ai/landing/patterns/wave-pattern.svg") center 102% / min(960px, 82%) auto repeat-x;
+  animation: marketing-grain-drift calc(var(--marketing-breath-duration) * 1.5) linear infinite;
+}
+
+:root[theme="dark"] .page.marketing-page > .el-container::after {
+  opacity: calc(var(--marketing-pattern-opacity) * 0.82);
+  filter: hue-rotate(14deg);
+}
+
+:root[theme="dark"] .page.marketing-page :where(.glass-card, .glass-surface) {
+  border-color: rgba(108, 130, 164, 0.34);
+}
+
+:root[theme="dark"] .page.marketing-page .hero,
+:root[theme="dark"] .page.marketing-page .section > .glass-card,
+:root[theme="dark"] .page.marketing-page .section > .glass-surface {
+  box-shadow:
+    16px 16px 34px rgba(1, 4, 11, 0.56),
+    -10px -10px 24px rgba(36, 46, 62, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(3, 9, 20, 0.5);
+}
+
+@keyframes marketing-breath {
+  0% {
+    opacity: calc(var(--marketing-pattern-opacity) * 0.85);
+  }
+  50% {
+    opacity: calc(var(--marketing-pattern-opacity) * 1.08);
+  }
+  100% {
+    opacity: calc(var(--marketing-pattern-opacity) * 0.85);
+  }
+}
+
+@keyframes marketing-grain-drift {
+  0% {
+    background-position: center, center, center, center, center, center 102%;
+  }
+  50% {
+    background-position: center, center, center, 46% 52%, 54% 48%, center 98%;
+  }
+  100% {
+    background-position: center, center, center, center, center, center 102%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page.marketing-page::before {
+    animation: none;
+  }
+}

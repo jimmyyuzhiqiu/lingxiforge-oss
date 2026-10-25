@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Login / internal pages
+Disallow: /login
+Disallow: /register
+Disallow: /search
+Disallow: /details
+Disallow: /home/
+Disallow: /workbench/
+Disallow: /usercenter/
+Disallow: /test
+Disallow: /404
+
+Sitemap: https://lingxiforge.com/sitemap.xml

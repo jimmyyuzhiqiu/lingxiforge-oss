@@ -1,0 +1,34 @@
+section {
+  overflow-x: hidden;
+}
+
+.big {
+  border-bottom: 1px solid var(--aside-border-line-color);
+
+  ul {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    padding: 10px;
+
+    i {
+      color: var(--font-color1);
+      font-size: 18px;
+    }
+
+    .center {
+      display: flex;
+      align-items: center;
+
+      i {
+        padding: 0 10px;
+        font-size: 24px;
+        color: var(--font-color3);
+      }
+
+      span {
+        color: var(--font-color3);
+      }
+    }
+  }
+}

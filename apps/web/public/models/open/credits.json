@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-01-30",
+  "models": [
+    {
+      "id": "nasa-hubble-a",
+      "localPath": "/models/open/nasa/hubble-space-telescope-a.glb",
+      "thumbnail": "/models/open/nasa/hubble-space-telescope-a.webp",
+      "title": "Hubble Space Telescope (A)",
+      "source": "NASA 3D Resources",
+      "sourcePage": "https://science.nasa.gov/3d-resources/hubble-space-telescope-a/",
+      "sourceFile": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/hubble-space-telescope-(a)/Hubble%20Space%20Telescope%20(A).glb",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-jwst-a",
+      "localPath": "/models/open/nasa/james-webb-space-telescope-a.glb",
+      "thumbnail": "/models/open/nasa/james-webb-space-telescope-a.webp",
+      "title": "James Webb Space Telescope (A)",
+      "source": "NASA 3D Resources",
+      "sourcePage": "https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/",
+      "sourceFile": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/james-webb-space-telescope-(a)/James%20Webb%20Space%20Telescope%20(A).glb",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-iss-a",
+      "localPath": "/models/open/nasa/international-space-station-a.glb",
+      "thumbnail": "/models/open/nasa/international-space-station-a.webp",
+      "title": "International Space Station (ISS) (A)",
+      "source": "NASA 3D Resources",
+      "sourcePage": "https://science.nasa.gov/3d-resources/international-space-station-iss-a/",
+      "sourceFile": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/international-space-station-(iss)-(a)/International%20Space%20Station%20(ISS)%20(A).glb",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-mars2020-perseverance",
+      "localPath": "/models/open/nasa/mars-2020-perseverance-rover.glb",
+      "thumbnail": "/models/open/nasa/mars-2020-perseverance-rover.webp",
+      "title": "Mars 2020 Perseverance Rover",
+      "source": "NASA 3D Resources",
+      "sourcePage": "https://science.nasa.gov/3d-resources/mars-2020-perseverance-rover/",
+      "sourceFile": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/mars-2020-perseverance-rover/Mars%202020%20Perseverance%20Rover.glb",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-apollo-lunar-module",
+      "localPath": "/models/open/nasa/apollo-lunar-module.glb",
+      "thumbnail": "/models/open/nasa/apollo-lunar-module.webp",
+      "title": "Apollo Lunar Module",
+      "source": "NASA 3D Resources",
+      "sourcePage": "https://science.nasa.gov/3d-resources/apollo-lunar-module/",
+      "sourceFile": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/apollo-lunar-module/Apollo%20Lunar%20Module.glb",
+      "license": "Public Domain (NASA)"
+    },
+    {
+      "id": "nasa-ace",
+      "localPath": "/models/open/nasa/advanced-composition-explorer.glb",
+      "thumbnail": "/models/open/nasa/advanced-composition-explorer.webp",
+      "title": "Advanced Composition Explorer",
+      "source": "NASA 3D Resources",
+      "sourcePage": "https://science.nasa.gov/3d-resources/advanced-composition-explorer/",
+      "sourceFile": "https://assets.science.nasa.gov/content/dam/science/cds/3d/resources/model/advanced-composition-explorer/Advanced%20Composition%20Explorer.glb",
+      "license": "Public Domain (NASA)"
+    }
+  ],
+  "notes": [
+    "NASA assets are generally public domain; do not imply NASA endorsement.",
+    "Prefer GLB for web runtime; provide STL only when targeting printing."
+  ]
+}
+
